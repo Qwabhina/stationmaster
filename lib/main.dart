@@ -18,8 +18,8 @@ void main() async {
 
   // Color the status bar
   SystemChrome.setSystemUIOverlayStyle(
-    SystemUiOverlayStyle(
-      systemNavigationBarColor: Get.theme.primaryColor,
+    const SystemUiOverlayStyle(
+      systemNavigationBarColor: Color(0xFF00265A),
     ),
   );
 }

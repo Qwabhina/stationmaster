@@ -16,14 +16,16 @@ class SplashScreen extends StatelessWidget {
     splashController.startAnimation();
 
     return Scaffold(
-        body: Container(
-      width: 200,
-      height: 200,
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: Get.theme.brightness == Brightness.light
-                  ? const AssetImage(smAppLogoL)
-                  : const AssetImage(smAppLogoD))),
+        body: Center(
+      child: Container(
+        width: 200,
+        height: 200,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: Get.theme.brightness == Brightness.light
+                    ? const AssetImage(smAppLogoL)
+                    : const AssetImage(smAppLogoD))),
+      ),
     ));
   }
 }

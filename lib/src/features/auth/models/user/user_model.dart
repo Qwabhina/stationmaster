@@ -23,16 +23,17 @@ class UserModel {
   @HiveField(8)
   String? pActive;
 
-  UserModel(
-      {this.uId,
-      this.shortName,
-      this.fullname,
-      this.email,
-      this.phone,
-      this.pwd,
-      this.ppwd,
-      this.date,
-      this.pActive});
+  UserModel({
+    this.uId,
+    this.shortName,
+    this.fullname,
+    this.email,
+    this.phone,
+    this.pwd,
+    this.ppwd,
+    this.date,
+    this.pActive,
+  });
 
   UserModel.fromJson(Map<String, dynamic> json) {
     uId = json['u_id'];

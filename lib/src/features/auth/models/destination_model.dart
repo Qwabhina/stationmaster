@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:stationmaster/src/constants/text_strings.dart';
 import 'package:stationmaster/src/utils/controllers/sm_controller.dart';
 
 class DestinationModel {
@@ -84,7 +85,7 @@ class DestinationsApi {
     if (await SmController().checkUserConnection()) {
       if (term.isNotEmpty) {
         var response = await http.post(
-          Uri.parse("http://station-master.rf.gd/process-search.php"),
+          Uri.parse("${smAPIServer}process-search.php"),
           body: {'_search': 'Search', 'search-term': term},
         );
 
