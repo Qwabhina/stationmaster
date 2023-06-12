@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:stationmaster/src/constants/colors.dart';
+import 'package:stationmaster/src/utils/theme/widget_themes/elevated_button_theme.dart';
+import 'package:stationmaster/src/utils/theme/widget_themes/outlined_button_theme.dart';
 import 'package:stationmaster/src/utils/theme/widget_themes/text_theme.dart';
 
 //Light Theme
@@ -9,16 +12,18 @@ class SmAppTheme {
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     textTheme: SmTextTheme.lightTextTheme,
-    primarySwatch: createMaterialColor(const Color(0xFF00265A)),
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(),
-    ),
+    outlinedButtonTheme: SmOutlineButtonTheme.lightOutlineBTheme,
+    elevatedButtonTheme: SmElevatedButtonTheme.lightOutlineBTheme,
+    primarySwatch: createMaterialColor(smPrimaryColor),
   );
 
   //Dark Theme
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     textTheme: SmTextTheme.darkTextTheme,
+    outlinedButtonTheme: SmOutlineButtonTheme.darkOutlineBTheme,
+    elevatedButtonTheme: SmElevatedButtonTheme.darkOutlineBTheme,
+    primarySwatch: createMaterialColor(smSecondaryColor),
   );
 }
 
